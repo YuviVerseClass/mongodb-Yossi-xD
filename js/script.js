@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const taskList = document.getElementById("task-list");
 
   const loadTasks = async () => {
-    const res = await fetch("/api/tasks");
+    const res = await fetch("http://localhost:3000/api/tasks");
     const tasks = await res.json();
     taskList.innerHTML = "";
     tasks.forEach(task => {
